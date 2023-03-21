@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="multimedia/Pelota Favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo Camisetas Shop</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="pagar.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+</head>
+    <header>
+        <div class="header-section containerdos">
+            <a href="index.html">
+                <img class="logo" src="./multimedia/messi copa.png" alt="">
+            </a>
+            <ul class="navbar-nav ml-auto navbar_style">
+                <li class="nav-item">
+                    <a class="nav-link" href="futbolargentino.html">Fútbol Argentino</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="futbolinternacional.html">Fútbol Internacional</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="seleccionargentina.html">Selección Argentina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="selecciones.html">Selecciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <div>
+                <img onclick="showCart(this)" class="cart" src="./multimedia/carrito.png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">❌</p>
+                <h3>Camisetas</h3>
+                <div class="card-items">
+                </div>
+                <h2>Total: $<strong class="price-total">0</strong></h2>
+                
+            </div>
+        </div>
+    </header>
+<h2 class="titleh2">👉Ya falta poco para que tengas tus camisetas👈</h2>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Datos de Facturación</h3>
+            <label for="fname"><i class="fa fa-user"></i> Nombre Completo</label>
+            <input type="text" id="fname" name="firstname" placeholder="Diego Armando Maradona">
+            <label for="email"><i class="fa fa-envelope"></i> Correo Electrónico </label>
+            <input type="text" id="email" name="email" placeholder="diegoarmandomaradona@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Domicilio</label>
+            <input type="text" id="adr" name="address" placeholder="Segurola y Habana 4310, 7mo piso">
+            <label for="city"><i class="fa fa-institution"></i> Localidad </label>
+            <input type="text" id="city" name="city" placeholder="Buenos Aires">
+          </div>
+
+          <div class="col-50">
+            <h3>Pago</h3>
+            <label for="fname">Tarjetas Disponibles</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Titular de la Tarjeta</label>
+            <input type="text" id="cname" name="cardname" placeholder="Diego Armando Maradona">
+            <label for="ccnum">Número de la Tarjeta</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Fecha de Vencimiento</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="Agosto">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Año de Vencimiento</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2028">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="110">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> El lugar de entrega es el mismo que el de facturación
+        </label>
+        <input type="submit" value="COMPRAR" id="btn" class="btn" onclick="comprar()">
+    </div>
+  </div>
+<script src="pagar.js"></script>
+<script src="principal.js" ></script>
+<script src="formulario.js" ></script>
+<script src="darkmode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<script>
+    function showCart(x){
+        document.getElementById("products-id").style.display = "block";
+    }
+    function closeBtn(){
+         document.getElementById("products-id").style.display = "none";
+    }
+    document.getElementById("dark-mode-toggle").onclick = function() {
+              toggleDarkMode();
+            };
+</script>
+
+</body>
+</html>

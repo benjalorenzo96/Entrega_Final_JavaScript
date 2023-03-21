@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="multimedia/Pelota Favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Camisetas Shop | Fútbol Argentino</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body class="dark-mode">
+    
+    <header>
+        <div class="header-section container">
+            <a href="index.html">
+                <img class="logo" src="./multimedia/messi copa.png" alt="">
+            </a>
+            <ul class="navbar-nav ml-auto navbar_style">
+                <li class="nav-item">
+                    <a class="nav-link" href="futbolargentino.html">Fútbol Argentino</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="futbolinternacional.html">Fútbol Internacional</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="seleccionargentina.html">Selección Argentina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="selecciones.html">Selecciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <div>
+                <img onclick="showCart(this)" class="cart" src="./multimedia/carrito.png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">❌</p>
+                <h3>Camisetas</h3>
+                <div class="card-items">
+                </div>
+                <h2>Total: $<strong class="price-total">0</strong></h2>
+                <button id="buy-button" class="buy-button">Comprar</button>
+                <div id="loader" class="loader"></div>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="search-box-container">
+            <div class="buscar">
+                <input type="text" placeholder="Buscar" required />          
+                <div class="btnbuscar"><i class="fas fa-search icon"></i></div>
+            </div>
+            <label class="switch"><input type="checkbox" id="dark-mode-toggle"><span class="slider round">
+            </span></label>
+            <img id="todas-camisetas-button" onclick="showCamisetas(this)" class="cart" src="./multimedia/camiseta-de-futbol.png" alt="" data-target=".carts">
+          </div>
+          
+        <div class="products">
+            <div class="carts">
+                <div>
+                    <img src="./multimedia/aued union camiseta.png" alt="">
+                    <p>$<span>14.000</span></p>
+                </div>
+                <p class="title">Luciano Aued - Unión de Santa Fe</p>
+                <a href="" data-id="1" class="btn-add-cart">¡La quiero!</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./multimedia/bou racing camiseta.png" alt="">
+                    <p>$<span>17.000</span></p>
+                </div>
+                <p class="title"> Gustavo Bou - Racing Club</p>
+                <a href="" class="btn-add-cart" data-id="2">¡La quiero!</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./multimedia/cvitanich banfield camiseta.png" alt="">
+                    <p>$<span>12.000</span></p>
+                </div>
+                <p class="title"> Darío Cvitanich - Banfield</p>
+                <a href="" data-id="3" class="btn-add-cart">¡La quiero!</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./multimedia/gabriel arias racing.png" alt="">
+                    <p>$<span>20.000</span></p>
+                </div>
+                <p class="title"> Gabriel Arias - Racing Club</p>
+                <a href="" data-id="4" class="btn-add-cart">¡La quiero!</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./multimedia/hauche argentinos camiseta.png" alt="">
+                    <p>$<span>14.000</span></p>
+                </div>
+                <p class="title"> Gabriel Hauche - Argentinos Juniors</p>
+                <a href="" data-id="5" class="btn-add-cart">¡La quiero!</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./multimedia/hauche racing camiseta.png" alt="">
+                    <p>$<span>17.000</span></p>
+                </div>
+                <p class="title"> Gabriel Hauche - Racing Club</p>
+                <a href="" data-id="6" class="btn-add-cart">¡La quiero!</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./multimedia/lisandro racing camiseta.png" alt="">
+                    <p>$<span>29.000</span></p>
+                </div>
+                <p class="title"> Lisandro Lopez - Racing Club</p>
+                <a href="" data-id="7" class="btn-add-cart">¡La quiero!</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./multimedia/lisandro racing 2.png" alt="">
+                    <p>$<span>27.000</span></p>
+                </div>
+                <p class="title"> Lisandro Lopez - Racing Club</p>
+                <a href="" data-id="8" class="btn-add-cart">¡La quiero!</a>
+            </div>
+           
+            
+    </section>
+
+    <footer class="footer static-bottom footer_style">
+        <div class="containerfooter">
+            <div class="row p-1 m-1">
+                <div class="col-4 col-md-4 col-md-4 text-left">
+                    <p>Página sin fines de lucro, ni comerciales.</p>
+                    <p>Copyright Benjamín Lorenzo©</p>
+                    
+                </div>
+                <div class="logos">
+                <div class="col-12 col-md-4 col-lg-8">
+                <a href="https://www.instagram.com/benjalorenzo96/"><img src="./multimedia/instagramlogo.png" alt="INSTAGRAM"></a>
+                <a href="https://www.linkedin.com/in/benjamin-lorenzo/"><img src="./multimedia/linkedinlogo.png" alt="LINKEDIN"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showCart(x){
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("products-id").style.display = "none";
+        }
+        document.getElementById("dark-mode-toggle").onclick = function() {
+              toggleDarkMode();
+            };
+
+    </script>
+    <script src="principal.js" ></script>
+    <script src="darkmode.js"></script>
+    <script src="busqueda.js"></script>
+    <script src="formulario.js" ></script>
+</body>
+</html> 

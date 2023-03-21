@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="multimedia/Pelota Favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Camisetas Shop | Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    
+  </head>
+<body class="dark-mode">
+    
+    <header>
+      <div class="header-section container">
+        <a href="index.html">
+            <img class="logo" src="./multimedia/messi copa.png" alt="">
+        </a>
+            <ul class="navbar-nav ml-auto navbar_style">
+                <li class="nav-item">
+                    <a class="nav-link" href="futbolargentino.html">Fútbol Argentino</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="futbolinternacional.html">Fútbol Internacional</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="seleccionargentina.html">Selección Argentina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="selecciones.html">Selecciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <div>
+                <img onclick="showCart(this)" class="cart" src="./multimedia/carrito.png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">❌</p>
+                <h3>Camisetas</h3>
+                <div class="card-items">
+                </div>
+                <h2>Total: $<strong class="price-total">0</strong></h2>
+                <button id="buy-button" class="buy-button">Comprar</button>
+                <div id="loader" class="loader"></div>
+            </div>
+        </div>
+    </header>
+    
+        <form id="form">
+          <div class="social">
+            <div class="title-form">Todo Camisetas Shop</div>
+            <div class="darkmodecontacto">
+            <label class="switch">
+              <input type="checkbox" id="dark-mode-toggle">
+              <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div class="question">
+                👇 Si ya tenés una cuenta 👇 <br />
+                <span class="acceso">Acceso Usuarios</span>
+            </div>
+  
+            <div class="btn">
+              <a href="https://www.google.com" class="btn-1">
+                <img src="https://img.icons8.com/color/30/000000/google-logo.png"/>
+                Ingresa con Google
+              </a>
+              <a href="https://www.facebook.com" class="btn-2">
+                <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png"/>
+                Ingresa con Facebook
+              </a>
+            </div>
+            
+  
+            <div class="or">💪 Si no estás registrado, registrate que es gratis! 💪</div>
+                <div class="or">👉 Registrándote accedes a descuentos y beneficios 👈</div>
+          </div>
+  
+          <div>
+            <label for="username">Usuario</label>
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Diego Armando Maradona"
+            />
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error"></div>
+          </div>
+  
+          <div>
+            <label for="email">Mail</label>
+            <i class="far fa-envelope"></i>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="diegoarmandomaradona@gmail.com"
+            />
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error"></div>
+          </div>
+  
+          <div>
+            <label for="password">Contraseña</label>
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Ingresa tu contraseña"
+            />
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error"></div>
+          </div>
+  
+          <button type="button" id="submit" onclick="showToast()">Registrarse</button>
+        </form>
+      </div>
+    <footer class="footer static-bottom footer_style">
+        <div class="containerfooter">
+            <div class="row p-1 m-1">
+                <div class="col-4 col-md-4 col-md-4 text-left">
+                    <p>Página sin fines de lucro, ni comerciales.</p>
+                    <p>Copyright Benjamín Lorenzo©</p>
+                    
+                </div>
+                <div class="logos">
+                <div class="col-12 col-md-4 col-lg-8">
+                <a href="https://www.instagram.com/benjalorenzo96/"><img src="./multimedia/instagramlogo.png" alt="INSTAGRAM"></a>
+                <a href="https://www.linkedin.com/in/benjamin-lorenzo/"><img src="./multimedia/linkedinlogo.png" alt="LINKEDIN"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showCart(x){
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("products-id").style.display = "none";
+        }
+        document.getElementById("dark-mode-toggle").onclick = function() {
+              toggleDarkMode();
+            };
+            
+
+    </script>
+    <script src="principal.js" ></script>
+    <script src="formulario.js" ></script>
+    <script src="darkmode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  </body>
+</html>
